@@ -70,7 +70,7 @@ collections:
                 widget: 'string'
               - label: 'Link label'
                 name: 'label'
-                name: 'string'                
+                widget: 'string'                
           # Contact Details
           - label: 'Contact Info'
             name: 'contact'
@@ -91,7 +91,7 @@ collections:
                 widget: 'string'
               - label: 'Link label'
                 name: 'label'
-                name: 'string'
+                widget: 'string'
               - label: 'Address'
                 name: 'address'
                 widget: 'markdown'
@@ -134,7 +134,7 @@ collections:
                 widget: 'string'
               - label: 'Link label'
                 name: 'label'
-                name: 'string'
+                widget: 'string'
           # Social Details
           - label: 'Social Details'
             name: 'social_details'
