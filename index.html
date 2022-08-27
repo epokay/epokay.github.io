@@ -10,7 +10,7 @@ layout: default
       <div class="col-lg-8 text-center">
         <h2 class="text-white mt-0">{{ site.data.site.about.title }}</h2>
         <hr class="divider divider-light" />
-        <p class="text-white-75 mb-4">{{ site.data.site.about.description }}</p>
+        <p class="text-white-75 mb-4">{{ site.data.site.about.description | markdownify }}</p>
         <a class="btn btn-light btn-xl" href="{{ site.data.site.about.link }}">{{ site.data.site.about.label }}</a> 
       </div>
     </div>
@@ -29,7 +29,7 @@ layout: default
         <div class="mt-5">
           <div class="mb-2"><i class="{{ tile.icon }} fs-1 text-primary"></i></div>
           <h3 class="h4 mb-2">{{ tile.title }}</h3>
-          <p class="text-muted mb-0">{{ tile.description }}</p>
+          <p class="text-muted mb-0">{{ tile.description | markdownify }}</p>
         </div>
       </div>
       {% endfor %}
@@ -74,7 +74,7 @@ layout: default
       <div class="col-lg-8 col-xl-6 text-center">
         <h2 class="mt-0">{{ site.data.site.contact.title }}</h2>
         <hr class="divider" />
-        <p class="text-muted mb-5">{{ site.data.site.contact.description }}</p>
+        <p class="text-muted mb-5">{{ site.data.site.contact.description | markdownify }}</p>
         <p>Contact: <a href="mailto:{{ site.data.site.company.contact.email }}">
           {{ site.data.site.contact.email }}
         </a></p>
