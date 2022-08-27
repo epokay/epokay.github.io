@@ -1,6 +1,6 @@
 ---
 title: Public Understanding
-icon: bi-person-video3
+icon: bi-puzzle
 description: Explantion of artificial intelligence, data and machine learning
   for non experts.
 ---
