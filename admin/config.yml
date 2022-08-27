@@ -15,7 +15,7 @@ collections:
       # Website Settings
       - label: 'Website Settings'
         name: 'site'
-        file: '_config.yml'
+        file: '_data/site.yml'
         editor:
           preview: false
         fields:
