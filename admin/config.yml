@@ -244,9 +244,10 @@ collections:
       - label: 'Title'
         name: 'title'
         widget: 'string'
-      - label: 'Icon'
+      - label: 'Bootstrap Icon'
         name: 'icon'
         widget: 'string'
+        hint: "These are bootstrap icons. See the full list here (prefix with bi- ... i.e. heart is bi-heart)."
       - label: 'Description'
         name: 'description'
         widget: 'markdown'
