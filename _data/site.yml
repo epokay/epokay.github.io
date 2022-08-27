@@ -1,6 +1,6 @@
 services:
   show: true
-  title: At Your Service
+  title: Services
   link: "#services"
   label: Services
 partners:
