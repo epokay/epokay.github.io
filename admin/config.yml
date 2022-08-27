@@ -53,6 +53,10 @@ collections:
             collapsed: true
             widget: 'object'
             fields:
+              - label: "Enable"
+                name: 'show'
+                widget: boolean
+                required: false
               - label: "Title"
                 name: 'title'
                 widget: 'string'
@@ -63,6 +67,10 @@ collections:
             collapsed: true
             widget: 'object'
             fields:
+              - label: "Enable"
+                name: 'show'
+                widget: boolean
+                required: false
               - label: "Title"
                 name: 'title'
                 widget: 'string'
@@ -154,284 +162,57 @@ collections:
                 name: 'instagram_link'
                 widget: 'string'
           # Collections Settings
-          - label: 'Display collections'
-            name: 'collections'
-            collapsed: true
+          - label: 'News'
+            name: 'news'
             widget: 'object'
-            required: true
-            fields: 
-              - label: 'News'
-                name: 'news'
-                widget: 'object'
-                fields:
-                - label: 'Output'
-                  name: 'output'
-                  widget: 'boolean'
-                  required: false
-              - label: 'People'
-                name: 'people'
-                widget: 'object'
-                fields:
-                - label: 'Output'
-                  name: 'output'
-                  widget: 'boolean'
-                  required: false
-              - label: 'Services'
-                name: 'services'
-                widget: 'object'
-                fields:
-                - label: 'Output'
-                  name: 'output'
-                  widget: 'boolean'
-                  required: false
-              - label: 'Projects'
-                name: 'projects'
-                widget: 'object'
-                fields:
-                - label: 'Output'
-                  name: 'output'
-                  widget: 'boolean'
-                  required: false
-              - label: 'Partners'
-                name: 'partners'
-                widget: 'object'
-                fields:
-                - label: 'Output'
-                  name: 'output'
-                  widget: 'boolean'
-                  required: false
-      # Navigation Menus
-      - label: 'Navigation Menus'
-        name: 'navigation_menus'
-        file: '_data/nav.yml'
-        editor:
-          preview: false
-        fields:
-          # Main Nav
-          - label: 'Main Nav'
-            name: 'main_nav'
-            collapsed: true
-            minimize_collapsed: true
-            widget: 'list'
-            required: false
-            fields: 
-              - label: 'Label'
-                name: 'label'
+            fields:
+              - label: 'Show'
+                name: 'show'
+                widget: 'boolean'
+                required: false
+          - label: 'People'
+            name: 'people'
+            widget: 'object'
+            fields:
+              - label: 'Show'
+                name: 'show'
+                widget: 'boolean'
+                required: false
+          - label: 'Services'
+            name: 'services'
+            widget: 'object'
+            fields:
+              - label: 'Show'
+                name: 'show'
+                widget: 'boolean'
+                required: false
+              - label: "Title"
+                name: 'title'
                 widget: 'string'
               - label: 'Link'
                 name: 'link'
                 widget: 'string'
-              - label: 'Submenu Item'
-                name: 'submenu_item'
-                collapsed: true
-                minimize_collapsed: true
-                widget: 'list'
-                required: false
-                fields: 
-                  - label: 'Label'
-                    name: 'label'
-                    widget: 'string'
-                  - label: 'Link'
-                    name: 'link'
-                    widget: 'string'
-          # Footer Nav
-          - label: 'Footer Nav'
-            name: 'footer_nav'
-            collapsed: true
-            minimize_collapsed: true
-            widget: 'list'
-            required: false
-            fields: 
-              - label: 'Label'
+              - label: 'Link label'
                 name: 'label'
+                widget: 'string'
+          - label: 'Projects'
+            name: 'projects'
+            widget: 'object'
+            fields:
+              - label: 'Show'
+                name: 'show'
+                widget: 'boolean'
+                required: false
+              - label: "Title"
+                name: 'title'
                 widget: 'string'
               - label: 'Link'
                 name: 'link'
                 widget: 'string'
-              - label: 'Submenu Item'
-                name: 'submenu_item'
-                collapsed: true
-                minimize_collapsed: true
-                widget: 'list'
-                required: false
-                fields: 
-                  - label: 'Label'
-                    name: 'label'
-                    widget: 'string'
-                  - label: 'Link'
-                    name: 'link'
-                    widget: 'string'
-          # Top Nav
-          - label: 'Top Bar'
-            name: 'top_bar'
-            collapsed: true
-            widget: 'object'
-            fields:
-              - label: 'Image'
-                name: 'image'
-                widget: 'image'
-              - label: 'Link'
-                name: 'link'
-                widget: 'string'
-              - label: 'Top Bar Nav'
-                name: 'top_bar_nav'
-                collapsed: true
-                minimize_collapsed: true
-                widget: 'list'
-                required: false
-                fields: 
-                  - label: 'Label'
-                    name: 'label'
-                    widget: 'string'
-                  - label: 'Link'
-                    name: 'link'
-                    widget: 'string'
-
-  # Pages
-  - name: 'pages'
-    label: 'Pages'
-    files:
-      # Homepage
-      - label: 'Homepage'
-        name: 'homepage'
-        file: '_data/homepage.yml'
-        editor:
-          preview: false
-        fields:
-          # Hero Section
-          - label: 'Hero'
-            name: 'hero'
-            collapsed: true
-            widget: 'object'
-            fields:
-              - label: 'Title'
-                name: 'title'
-                widget: 'string'
-          # About Section
-          - label: 'About'
-            name: 'about'
-            collapsed: true
-            widget: 'object'
-            fields:
-              - label: 'Title'
-                name: 'title'
-                widget: 'string'
-              - label: 'Heading'
-                name: 'heading'
-                widget: 'string'
-              - label: 'Content'
-                name: 'content'
-                widget: 'markdown'
-              - label: 'Link Label'
+              - label: 'Link label'
                 name: 'label'
                 widget: 'string'
-              - label: 'Link URL'
-                name: 'link'
-                widget: 'string'
-              - label: 'Image'
-                name: 'image'
-                widget: 'image'
-          # Research Section
-          - label: 'Research'
-            name: 'research'
-            collapsed: true
-            widget: 'object'
-            fields:
-              - label: 'Title'
-                name: 'title'
-                widget: 'string'
-              - label: 'Heading'
-                name: 'heading'
-                widget: 'string'
-              - label: 'Content'
-                name: 'content'
-                widget: 'markdown'
-              - label: 'Link Label'
-                name: 'labell'
-                widget: 'string'
-              - label: 'Link URL'
-                name: 'link'
-                widget: 'string'
-              - label: 'Image'
-                name: 'image'
-                widget: 'image'
-      # Privacy Policy
-      - label: 'Privacy Policy'
-        name: 'privacy_policy'
-        file: '_data/privacy_policy.yml'
-        editor:
-          preview: false
-        fields:
-          # Hero Section
-          - label: 'Hero'
-            name: 'hero'
-            collapsed: true
-            widget: 'object'
-            fields:
-              - label: 'Title'
-                name: 'title'
-                widget: 'string'
-          # Content Section
-          - label: 'Content'
-            name: 'content'
-            collapsed: true
-            widget: 'object'
-            fields:
-              - label: 'Body'
-                name: 'body'
-                widget: 'markdown'
-      # Terms of Service
-      - label: 'Terms of Service'
-        name: 'terms_of_service'
-        file: '_data/terms_of_service.yml'
-        editor:
-          preview: false
-        fields:
-          # Hero Section
-          - label: 'Hero'
-            name: 'hero'
-            collapsed: true
-            widget: 'object'
-            fields:
-              - label: 'Title'
-                name: 'title'
-                widget: 'string'
-          # Content Section
-          - label: 'Content'
-            name: 'content'
-            collapsed: true
-            widget: 'object'
-            fields:
-              - label: 'Body'
-                name: 'body'
-                widget: 'markdown'
 
-
-  # Blog Collection
-  - label: 'Blog'
-    name: 'Blog'
-    folder: '_posts'
-    create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    editor:
-      preview: false
-    fields:
-      - label: 'Layout'
-        name: 'layout'
-        widget: 'hidden'
-        default: 'blog-single'
-      - label: 'Title'
-        name: 'title'
-        widget: 'string'
-      - label: 'Excerpt'
-        name: 'excerpt'
-        widget: 'text'
-      - label: 'Featured Image'
-        name: 'featured_image'
-        widget: 'image'
-      - label: 'Body'
-        name: 'body'
-        widget: 'markdown'
 
   # News Collection
   - label: 'News'
@@ -609,55 +390,6 @@ collections:
       widget: 'markdown'
       required: false
 
-  # Research Collection
-  - label: 'Research'
-    name: 'research'
-    folder: '_research/'
-    create: true
-    slug: '{{slug}}'
-    editor:
-      preview: false
-    fields:
-      - label: 'Layout'
-        name: 'layout'
-        widget: 'hidden'
-        default: 'research-single'
-      - label: 'Title'
-        name: 'title'
-        widget: 'string'
-      - label: 'Excerpt'
-        name: 'excerpt'
-        widget: 'text'
-      - label: 'Featured Image'
-        name: 'featured_image'
-        widget: 'image'
-      - label: 'Overview Short'
-        name: 'overview_short'
-        widget: 'markdown'
-      - label: 'Overview Long'
-        name: 'overview_long'
-        widget: 'markdown'
-        required: false
-      - label: 'Related Projects'
-        name: 'projects'
-        widget: 'relation'
-        collection: 'projects'
-        search_fields: ["title"]
-        value_field: "{{slug}}"
-        display_fields: ["title"]
-        options_length: 999
-        multiple: true
-        required: false
-      - label: 'Related People'
-        name: 'people'
-        widget: 'relation'
-        collection: 'people'
-        search_fields: ["given", "family"]
-        value_field: "{{slug}}"
-        display_fields: ["given", "title"]
-        options_length: 999
-        multiple: true
-        required: false
 
   # Partner Collection
   - label: 'Partners'
@@ -671,7 +403,7 @@ collections:
       - label: 'Layout'
         name: 'layout'
         widget: 'hidden'
-        default: 'project-single'
+        default: 'partner-single'
       - label: 'Title'
         name: 'title'
         widget: 'string'
@@ -684,29 +416,6 @@ collections:
       - label: 'Body'
         name: 'body'
         widget: 'markdown'
-      - label: 'Partner Funders'
-        name: 'project_funders'
-        collapsed: true
-        minimize_collapsed: true
-        required: false
-        widget: 'list'
-        fields: 
-          - label: 'Image'
-            name: 'image'
-            widget: 'image'
-          - label: 'Link'
-            name: 'link'
-            widget: 'string'
-      - label: 'Related People'
-        name: 'people'
-        widget: 'relation'
-        collection: 'people'
-        search_fields: ["given", "family"]
-        value_field: "{{slug}}"
-        display_fields: ["given", "family"]
-        options_length: 999
-        multiple: true
-        required: false
 
   # Project Collection
   - label: 'Projects'
