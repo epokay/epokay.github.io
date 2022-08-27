@@ -37,6 +37,7 @@ collections:
               - label: "Enable"
                 name: 'show'
                 widget: 'boolean'
+                required: false
               - label: "Title"
                 name: 'title'
                 widget: 'string'
@@ -80,6 +81,7 @@ collections:
               - label: "Enable"
                 name: 'show'
                 widget: boolean
+                required: false
               - label: "Title"
                 name: 'title'
                 widget: 'string'
@@ -113,6 +115,7 @@ collections:
               - label: "Enable"
                 name: 'show'
                 widget: boolean
+                required: false
               - label: "Title"
                 name: 'title'
                 widget: 'string'
@@ -164,6 +167,7 @@ collections:
                 - label: 'Output'
                   name: 'output'
                   widget: 'boolean'
+                  required: false
               - label: 'People'
                 name: 'people'
                 widget: 'object'
@@ -171,6 +175,7 @@ collections:
                 - label: 'Output'
                   name: 'output'
                   widget: 'boolean'
+                  required: false
               - label: 'Services'
                 name: 'services'
                 widget: 'object'
@@ -178,6 +183,7 @@ collections:
                 - label: 'Output'
                   name: 'output'
                   widget: 'boolean'
+                  required: false
               - label: 'Projects'
                 name: 'projects'
                 widget: 'object'
@@ -185,6 +191,7 @@ collections:
                 - label: 'Output'
                   name: 'output'
                   widget: 'boolean'
+                  required: false
               - label: 'Partners'
                 name: 'partners'
                 widget: 'object'
@@ -192,6 +199,7 @@ collections:
                 - label: 'Output'
                   name: 'output'
                   widget: 'boolean'
+                  required: false
       # Navigation Menus
       - label: 'Navigation Menus'
         name: 'navigation_menus'
@@ -460,34 +468,23 @@ collections:
         name: 'body'
         widget: 'markdown'
 
-  # Events Collection
-  - label: 'Events'
-    name: 'events'
-    folder: '_events'
+  # Services Collection
+  - label: 'Services'
+    name: 'services'
+    folder: '_services'
     create: true
     slug: '{{slug}}'
     editor:
       preview: false
     fields:
-      - label: 'Layout'
-        name: 'layout'
-        widget: 'hidden'
-        default: 'event-single'
       - label: 'Title'
         name: 'title'
         widget: 'string'
-      - label: 'Event Date'
-        name: 'event_date'
-        widget: 'date'
-        date_format: "DD.MM.YYYY"
-      - label: 'Excerpt'
-        name: 'excerpt'
-        widget: 'text'
-      - label: 'Featured Image'
-        name: 'featured_image'
-        widget: 'image'
-      - label: 'Body'
-        name: 'body'
+      - label: 'Icon'
+        name: 'icon'
+        widget: 'string'
+      - label: 'Description'
+        name: 'description'
         widget: 'markdown'
   
   # People Collection
