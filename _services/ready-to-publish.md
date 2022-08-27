@@ -1,5 +1,6 @@
 ---
-title: Ready to Publish
-description: You can use this design as is, or you can make changes!
-icon: "bi-globe"
+title: Public Understanding
+icon: bi-globe
+description: Explantion of artificial intelligence, data and machine learning
+  for non experts.
 ---
