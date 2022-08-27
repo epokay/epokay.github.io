@@ -6,9 +6,10 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ms-auto my-2 my-lg-0">
         {% if site.show.about %}<li class="nav-item"><a class="nav-link" href="#about">About</a></li>{%endif%}
-        {% if site.show.services %}<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>{%endif%}
-        {% if site.show.portfolio %}<li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>{%endif%}
-        {% if site.show.contact %}<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>{%endif%}
+        {% if site.collections.services.output %}<li class="nav-item"><a class="nav-link" href="{{ site.services.link }}">{{ site.services.label }}</a></li>{%endif%}
+        {% if site.collections.projects.output %}<li class="nav-item"><a class="nav-link" href="{{ site.projects.link }}">{{ site.projects.label }}</a></li>{%endif%}
+        {% if site.contact.show %}<li class="nav-item"><a class="nav-link" href="{{ site.contact.link }}">{{ site.contact.label }}</a></li>{%endif%}
+        {% if site.collections.partners.show %}<li class="nav-item"><a class="nav-link" href="{{ site.partners.link }}">{{ site.partners.label }}</a></li>{%endif%}
       </ul>
     </div>
   </div>
@@ -23,7 +24,7 @@
       </div>
       <div class="col-lg-8 align-self-baseline">
         <p class="text-white-75 mb-5">{{ site.description }}</p>
-        <a class="btn btn-primary btn-xl" href="{{ site.more.link }}">{{ site.more.label }}</a>
+        <a class="btn btn-primary btn-xl" href="{{ site.masthead.link }}">{{ site.masthead.label }}</a>
       </div>
     </div>
   </div>

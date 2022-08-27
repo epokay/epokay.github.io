@@ -17,14 +17,14 @@ layout: default
   </div>
 </section>
 {% endif %}
-{% if site.show.services %}
+{% if site.collections.services.output %}
 <!-- Services-->
 <section class="page-section" id="services">
   <div class="container px-4 px-lg-5">
-    <h2 class="text-center mt-0">At Your Service</h2>
+    <h2 class="text-center mt-0">{{ site.services.title }}</h2>
     <hr class="divider" />
     <div class="row gx-4 gx-lg-5">
-      {% for tile in site.resources %}
+      {% for tile in site.services %}
       <div class="col-lg-3 col-md-6 text-center">
         <div class="mt-5">
           <div class="mb-2"><i class="{{ tile.icon }} fs-1 text-primary"></i></div>
@@ -37,7 +37,7 @@ layout: default
 </div>
 </section>
 {% endif %}
-{% if site.show.portfolio %}
+{% if site.collections.projects.output %}
 <!-- Portfolio-->
 <div id="portfolio">
   <div class="container-fluid p-0">
@@ -57,16 +57,16 @@ layout: default
   </div>
 </div>
 {% endif %}
-{% if site.show.call_to_action %}
+{% if site.call_to_action.show %}
 <!-- Call to action-->
 <section class="page-section bg-dark text-white">
   <div class="container px-4 px-lg-5 text-center">
-    <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-    <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
+    <h2 class="mb-4">{{ site.call_to_action.title }}</h2>
+    <a class="btn btn-light btn-xl" href="{{ site.call_to_action.link }}">{{ site.call_to_action.label }}</a>
   </div>
 </section>
 {% endif %}
-{%if site.show.contact %}
+{%if site.contact.show %}
 <!-- Contact-->
 <section class="page-section" id="contact">
   <div class="container px-4 px-lg-5">
@@ -75,12 +75,33 @@ layout: default
         <h2 class="mt-0">{{ site.contact.title }}</h2>
         <hr class="divider" />
         <p class="text-muted mb-5">{{ site.contact.description }}</p>
-        <a href="mailto:{{ site.contact.email }}">Contact:
+        <p>Contact: <a href="mailto:{{ site.company.contact.email }}">
           {{ site.contact.email }}
-        </a>
+        </a></p>
 	
       </div>
     </div>
   </div>
 </section>
+{% endif %}
+{% if site.collections.partners.output %}
+<!-- Portfolio-->
+<div id="portfolio">
+  <h2 class="mt-0">{{ site.partners.title }}</h2>
+  <div class="container-fluid p-0">
+    <div class="row g-0">
+      {% for tile in site.partners %}
+      <div class="col-lg-4 col-sm-6">
+        <a class="portfolio-box" href="{{ tile.url }}" title="{{ tile.title }}">
+          <img class="img-fluid" src="{{ tile.featured_image }}" alt="..." />
+          <div class="portfolio-box-caption">
+            <div class="project-category text-white-50">{{ tile.category }}</div>
+            <div class="project-name">{{ tile.title }}</div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
 {% endif %}

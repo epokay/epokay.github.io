@@ -19,19 +19,79 @@ collections:
         editor:
           preview: false
         fields:
-          # Site Logo
+          - lable: 'Title'
+            name: title
+            widget: 'string'
           - label: 'Site Logo'
             name: 'site_logo'
             widget: 'image'
           - label: 'Site Logo Dark'
             name: 'site_logo_dark'
             widget: 'image'
-          # Contact Details
-          - label: 'Contact Details'
-            name: 'contact_details'
+          # Call to Action Details
+          - label: 'Call to Action'
+            name: call_to_action
             collapsed: true
             widget: 'object'
             fields:
+              - label: "Enable"
+                name: 'show'
+                widget: 'boolean'
+              - label: "Title"
+                name: 'title'
+                widget: 'string'
+              - label: 'Link'
+                name: 'link'
+                widget: 'string'
+              - label: 'Link label'
+                name: 'label'
+                widget: 'string'
+          # Services Details (enabled by services collection)
+          - label: 'Services'
+            name: services
+            collapsed: true
+            widget: 'object'
+            fields:
+              - label: "Title"
+                name: 'title'
+                widget: 'string'
+
+          # Services Details (enabled by services collection)
+          - label: 'Partners'
+            name: partners
+            collapsed: true
+            widget: 'object'
+            fields:
+              - label: "Title"
+                name: 'title'
+                widget: 'string'
+              - label: 'Link'
+                name: 'link'
+                widget: 'string'
+              - label: 'Link label'
+                name: 'label'
+                name: 'string'                
+          # Contact Details
+          - label: 'Contact Info'
+            name: 'contact'
+            collapsed: true
+            widget: 'object'
+            fields:
+              - label: "Enable"
+                name: 'show'
+                widget: boolean
+              - label: "Title"
+                name: 'title'
+                widget: 'string'
+              - label: 'Description'
+                name: 'description'
+                widget: 'markdown'
+              - label: 'Link'
+                name: 'link'
+                widget: 'string'
+              - label: 'Link label'
+                name: 'label'
+                name: 'string'
               - label: 'Address'
                 name: 'address'
                 widget: 'markdown'
@@ -44,6 +104,37 @@ collections:
               - label: 'Email'
                 name: 'email'
                 widget: 'string'
+          # About Details
+          - label: 'About the company'
+            name: 'about'
+            collapsed: true
+            widget: 'object'
+            fields:
+              - label: "Enable"
+                name: 'show'
+                widget: boolean
+              - label: "Title"
+                name: 'title'
+                widget: 'string'
+              - label: 'Description'
+                name: 'description'
+                widget: 'markdown'
+          # Masthead images
+          - label: 'Masthead Image'
+            name: 'masthead'
+            collapsed: true
+            widget: 'object'
+            required: true
+            fields: 
+              - label: 'Image'
+                name: 'image'
+                widget: 'image'
+              - label: 'Link'
+                name: 'link'
+                widget: 'string'
+              - label: 'Link label'
+                name: 'label'
+                name: 'string'
           # Social Details
           - label: 'Social Details'
             name: 'social_details'
@@ -59,34 +150,48 @@ collections:
               - label: 'Instagram'
                 name: 'instagram_link'
                 widget: 'string'
-          # Footer Settings
-          - label: 'Footer Images'
-            name: 'footer_images'
+          # Collections Settings
+          - label: 'Display collections'
+            name: 'collections'
             collapsed: true
-            widget: 'list'
-            required: false
+            widget: 'object'
+            required: true
             fields: 
-              - label: 'Image'
-                name: 'image'
-                widget: 'image'
-              - label: 'Link'
-                name: 'link'
-                widget: 'string'
-      # Image settings
-      - label: "Image Settings"
-        name: images
-        file: "_data/boxes.yml"
-        editor:
-          preview: false
-        fields:
-          - label: Image directory
-            name: directory
-            widget: string
-            hint: The directory where images are stored.
-          - label: Person placeholder
-            name: person_placeholder
-            widget: image
-            hint: "A place-holder image for a person if they don't have one provided."
+              - label: 'News'
+                name: 'news'
+                widget: 'object'
+                fields:
+                - label: 'Output'
+                  name: 'output'
+                  widget: 'boolean'
+              - label: 'People'
+                name: 'people'
+                widget: 'object'
+                fields:
+                - label: 'Output'
+                  name: 'output'
+                  widget: 'boolean'
+              - label: 'Services'
+                name: 'services'
+                widget: 'object'
+                fields:
+                - label: 'Output'
+                  name: 'output'
+                  widget: 'boolean'
+              - label: 'Projects'
+                name: 'projects'
+                widget: 'object'
+                fields:
+                - label: 'Output'
+                  name: 'output'
+                  widget: 'boolean'
+              - label: 'Partners'
+                name: 'partners'
+                widget: 'object'
+                fields:
+                - label: 'Output'
+                  name: 'output'
+                  widget: 'boolean'
       # Navigation Menus
       - label: 'Navigation Menus'
         name: 'navigation_menus'
@@ -242,160 +347,6 @@ collections:
               - label: 'Image'
                 name: 'image'
                 widget: 'image'
-          # Partners
-          - label: 'Partners'
-            name: 'partners'
-            collapsed: true
-            minimize_collapsed: true
-            widget: 'list'
-            fields: 
-              - label: 'Image'
-                name: 'image'
-                widget: 'image'
-              - label: 'Link'
-                name: 'link'
-                widget: 'string'
-      # About
-      - label: 'About'
-        name: 'about'
-        file: '_data/about.yml'
-        editor:
-          preview: false
-        fields:
-          # Hero Section
-          - label: 'Hero'
-            name: 'hero'
-            collapsed: true
-            widget: 'object'
-            fields:
-              - label: 'Title'
-                name: 'title'
-                widget: 'string'
-          # Content
-          - label: 'Body'
-            name: 'body'
-            widget: 'markdown'
-          # Partners
-          - label: 'Partners'
-            name: 'partners'
-            collapsed: true
-            minimize_collapsed: true
-            widget: 'list'
-            fields: 
-              - label: 'Name'
-                name: 'name'
-                widget: 'string'
-              - label: 'Logo'
-                name: 'logo'
-                widget: 'image'
-              - label: 'Link'
-                name: 'link'
-                widget: 'string'
-          # Grid
-          - label: 'Grid'
-            name: 'grid'
-            collapsed: true
-            minimize_collapsed: true
-            widget: 'list'
-            fields:
-              - label: 'Title'
-                name: 'title'
-                widget: 'string'
-              - label: 'Description'
-                name: 'description'
-                widget: 'string'
-              - label: 'Link'
-                name: 'link'
-                widget: 'string'
-              - label: 'Image'
-                name: 'image'
-                widget: 'image'
-      # Contact
-      - label: 'Contact'
-        name: 'contact'
-        file: '_data/contact.yml'
-        editor:
-          preview: false
-        fields:
-          # Hero Section
-          - label: 'Hero'
-            name: 'hero'
-            collapsed: true
-            widget: 'object'
-            fields:
-              - label: 'Title'
-                name: 'title'
-                widget: 'string'
-          # Contact Details
-          - label: 'Contact Details'
-            name: 'contact_details'
-            collapsed: true
-            widget: 'object'
-            fields:
-              - label: 'Image'
-                name: 'image'
-                widget: 'image'
-      # Resources
-      - label: 'Resources'
-        name: 'resources'
-        file: '_data/resources.yml'
-        editor:
-          preview: false
-        fields:
-          # Hero Section
-          - label: 'Hero'
-            name: 'hero'
-            collapsed: true
-            widget: 'object'
-            fields:
-              - label: 'Title'
-                name: 'title'
-                widget: 'string'
-          # Resources Section
-          - label: 'Resources'
-            name: 'resources'
-            collapsed: true
-            minimize_collapsed: true
-            widget: 'list'
-            fields:
-              - label: 'Title'
-                name: 'title'
-                widget: 'string'
-              - label: 'Category'
-                name: 'category'
-                widget: 'select'
-                options: ["Policy", "Teaching", "Software"]
-              - label: 'Link'
-                name: 'link'
-                widget: 'string'
-              - label: 'Icon'
-                name: 'icon'
-                widget: 'image'
-      # Assessor App
-      - label: 'Assessor App'
-        name: 'assessor_app'
-        file: '_data/assessor_app.yml'
-        editor:
-          preview: false
-        fields:
-          # Hero Section
-          - label: 'Hero'
-            name: 'hero'
-            collapsed: true
-            widget: 'object'
-            fields:
-              - label: 'Title'
-                name: 'title'
-                widget: 'string'
-          # Content Section
-          - label: 'Content'
-            name: 'content'
-            collapsed: true
-            widget: 'object'
-            fields:
-              - label: 'Body'
-                name: 'body'
-                widget: 'markdown'
       # Privacy Policy
       - label: 'Privacy Policy'
         name: 'privacy_policy'
@@ -707,6 +658,55 @@ collections:
         search_fields: ["given", "family"]
         value_field: "{{slug}}"
         display_fields: ["given", "title"]
+        options_length: 999
+        multiple: true
+        required: false
+
+  # Partner Collection
+  - label: 'Partners'
+    name: 'partners'
+    folder: '_partners/'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - label: 'Layout'
+        name: 'layout'
+        widget: 'hidden'
+        default: 'project-single'
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+      - label: 'Excerpt'
+        name: 'excerpt'
+        widget: 'text'
+      - label: 'Featured Image'
+        name: 'featured_image'
+        widget: 'image'
+      - label: 'Body'
+        name: 'body'
+        widget: 'markdown'
+      - label: 'Partner Funders'
+        name: 'project_funders'
+        collapsed: true
+        minimize_collapsed: true
+        required: false
+        widget: 'list'
+        fields: 
+          - label: 'Image'
+            name: 'image'
+            widget: 'image'
+          - label: 'Link'
+            name: 'link'
+            widget: 'string'
+      - label: 'Related People'
+        name: 'people'
+        widget: 'relation'
+        collection: 'people'
+        search_fields: ["given", "family"]
+        value_field: "{{slug}}"
+        display_fields: ["given", "family"]
         options_length: 999
         multiple: true
         required: false
