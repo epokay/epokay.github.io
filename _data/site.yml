@@ -1,8 +1,4 @@
-services:
-  show: true
-  title: Services
-  link: "#services"
-  label: Services
+title: epokay.ai
 partners:
   show: false
   title: Our Partners
@@ -24,16 +20,20 @@ about:
     and running in no time! Choose one of our open source, free to download, and
     easy to use themes! No strings attached!
 markdown: kramdown
-title: epokay.ai
 call_to_action:
   show: false
   title: Free Download at Start Bootstrap!
   label: Download Now!
   link: https://startbootstrap.com/theme/creative/
+services:
+  show: true
+  title: Services
+  link: "#services"
+  label: Services
 masthead:
   link: "#contact"
   label: Find Out More
-  image: /assets/img/bg-masthead.jpg
+  image: /assets/images/img_3129.jpeg
 projects:
   show: false
   title: Portfolio
