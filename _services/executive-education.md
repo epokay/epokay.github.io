@@ -1,5 +1,5 @@
 ---
-title: Sturdy Themes
-icon: bi-gem
-description: Our themes are updated regularly to keep them bug free!
+title: System Deployment
+icon: bi-truck
+description: Support with the real world challenges of deploying artificial intelligence.
 ---
