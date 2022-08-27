@@ -1,6 +1,6 @@
 ---
 title: Executive Education
-icon: bi-person-video3
-description: Supporting senior decision makers on integrating AI in businesses,
-  government or third sector.
+icon: bi-person-square
+description: Aiding senior decision makers in integrating AI in businesses,
+  government, and third sector organisations.
 ---
