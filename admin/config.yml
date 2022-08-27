@@ -22,12 +22,6 @@ collections:
           - lable: 'Title'
             name: title
             widget: 'string'
-          - label: 'Site Logo'
-            name: 'site_logo'
-            widget: 'image'
-          - label: 'Site Logo Dark'
-            name: 'site_logo_dark'
-            widget: 'image'
           # Call to Action Details
           - label: 'Call to Action'
             name: call_to_action
@@ -105,12 +99,15 @@ collections:
               - label: 'Address'
                 name: 'address'
                 widget: 'markdown'
+                required: false
               - label: 'Tel'
                 name: 'tel'
                 widget: 'string'
+                required: false
               - label: 'Fax'
                 name: 'fax'
                 widget: 'string'
+                required: false
               - label: 'Email'
                 name: 'email'
                 widget: 'string'
@@ -155,12 +152,15 @@ collections:
               - label: 'Twitter'
                 name: 'twitter_link'
                 widget: 'string'
+                required: false
               - label: 'Facebook'
                 name: 'facebook_link'
                 widget: 'string'
+                required: false
               - label: 'Instagram'
                 name: 'instagram_link'
                 widget: 'string'
+                required: false
           # Collections Settings
           - label: 'News'
             name: 'news'
