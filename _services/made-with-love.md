@@ -1,5 +1,5 @@
 ---
-title: Made with Love
-description: Is it really open source if it's not made with love?
+title: Policy
 icon: bi-heart
+description: Advice on policy for data, machine learning and artificial intelligence.
 ---
