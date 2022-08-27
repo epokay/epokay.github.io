@@ -247,7 +247,7 @@ collections:
       - label: 'Bootstrap Icon'
         name: 'icon'
         widget: 'string'
-        hint: "These are bootstrap icons. See the full list here (prefix with bi- ... i.e. heart is bi-heart)."
+        hint: "These are bootstrap icons. See the full list here https://icons.getbootstrap.com (prefix with bi- ... i.e. heart is bi-heart)."
       - label: 'Description'
         name: 'description'
         widget: 'markdown'
